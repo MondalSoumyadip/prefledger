@@ -1,0 +1,39 @@
+{
+  "address": "0x0C108164Ee97792443bB03F68357D6F4033Cc568",
+  "abi": [
+    {
+      "inputs": [{"internalType": "bytes32","name": "key","type": "bytes32"},{"internalType": "string","name": "ipfsCID","type": "string"}],
+      "name": "setPreference",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [{"internalType": "address","name": "user","type": "address"},{"internalType": "bytes32","name": "key","type": "bytes32"}],
+      "name": "getPreference",
+      "outputs": [{"internalType": "string","name": "ipfsCID","type": "string"},{"internalType": "uint256","name": "timestamp","type": "uint256"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [{"internalType": "address","name": "user","type": "address"},{"internalType": "bytes32","name": "key","type": "bytes32"}],
+      "name": "getPreferenceHistory",
+      "outputs": [{"components": [{"internalType": "string","name": "ipfsCID","type": "string"},{"internalType": "uint256","name": "timestamp","type": "uint256"}],"internalType": "struct PrefLedger.Preference[]","name": "","type": "tuple[]"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [{"internalType": "address","name": "user","type": "address"}],
+      "name": "getUserKeys",
+      "outputs": [{"internalType": "bytes32[]","name": "","type": "bytes32[]"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{"indexed": true,"internalType": "address","name": "user","type": "address"},{"indexed": true,"internalType": "bytes32","name": "key","type": "bytes32"},{"internalType": "string","name": "ipfsCID","type": "string"},{"internalType": "uint256","name": "timestamp","type": "uint256"}],
+      "name": "PreferenceSet",
+      "type": "event"
+    }
+  ]
+}
